@@ -1,10 +1,13 @@
 - ELEMENTS:
-    -- LOGO
+    -- LOGO 
+        --> Render different logos each time the page is loaded
     -- SIDE MENU
+        --> Arrumar hover das categorias
+        --> Arrumar routing de tags
     -- CARDS
+        --> Arrumar hover do card
     -- MODALS
-
-- REACT ROUTING
+        --> Arrumar clique para fechar e design do modal no geral
 
 - DATA: CREATE THE RENDER OF THE CARDS BASED ON THE ARRAY OF THE DATA CREATED.
 (OBS: WILL WE USE ANY DATABASE OR API OR SOMETHING LIKE THAT OR JUST SIMPLY LOAD THE IMAGES HERE ON THE PROJECT FOLDER AND WORK WITH THAT?)

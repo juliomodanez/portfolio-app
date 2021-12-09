@@ -2,21 +2,21 @@ import React from "react";
 
 function SideMenu() {
   return (
-    <div className="bg-white">
-      <ul className="p-4 leading-10 mt-12">
-        <li>Home</li>
-        <li>Categoria 1</li>
-        <li>Categoria 2</li>
-        <li>Categoria 3</li>
-        <li>Categoria 4</li>
-        <li>Categoria 5</li>
+    <div className="w-40">
+      <ul className="leading-10 mt-10">
+        <li className="hover:bg-gray-800 hover:text-white p-2">Página Inicial</li>
+        <li className="hover:bg-gray-800 hover:text-white p-2">Esculturas</li>
+        <li className="hover:bg-gray-800 hover:text-white p-2">Pinturas</li>
+        
         <br />
-        <li>Bio | Contato</li>
-        <li>Curriculo</li>
-        <li>Impresso</li>
+        <li className="hover:bg-gray-800 hover:text-white p-2">Bio | Contato</li>
+        <li className="hover:bg-gray-800 hover:text-white p-2">Projetos</li>
+        <li className="hover:bg-gray-800 hover:text-white p-2">Curriculo</li>
+        <li className="hover:bg-gray-800 hover:text-white p-2">Impresso</li>
       </ul>
     </div>
   );
 }
+
 
 export default SideMenu;

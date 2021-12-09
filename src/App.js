@@ -12,7 +12,6 @@ function App() {
       <div className="flex">
         <SideMenu />
         <div>
-          <p className="text-center text-gray-400">Clique em um card para saber mais sobre a obra!</p>
           <Card />
         </div>
       </div>

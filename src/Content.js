@@ -18,7 +18,7 @@ const images = [
   },
   {
     title: "Boxeador",
-    description: "",
+    description: "Escultura de um Boxeador",
     tags: "escultura",
     source: Boxeador,
     altImages: [],
