@@ -1,21 +1,27 @@
 import "./index.css";
-import SideMenu from "./Components/SideMenu";
-import Navbar from "./Components/Navbar";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Card from "./Components/Card";
+import SideMenu from "./Components/SideMenu";
 
 function App() {
   return (
-    <div className="">
-      <div>
-        <Navbar />
-      </div>
+    <Router>
       <div className="flex">
         <SideMenu />
-        <div>
-          <Card />
-        </div>
+
+        <Routes>
+          <Route path="/" exact element={<Card props={""} />} />
+          <Route
+            path="/esculturas"
+            exact
+            element={<Card props={"escultura"} />}
+          />
+          <Route path="/pinturas" exact element={<Card props={"pintura"} />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 

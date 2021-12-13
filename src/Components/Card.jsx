@@ -6,10 +6,11 @@ function Card() {
   const [IsModalVisible, setIsModalVisible] = useState(false);
   let obras = [];
 
+  //mapeia cards
   return (
-    <div className="flex">
+    <div className="flex mt-40">
       <div className="grid grid-cols-3">
-        {images.map((tags, index) => {
+        {images.map((tag, index) => {
           const obra = {
             title: images[index].title,
             description: images[index].description,
@@ -59,14 +60,15 @@ function Card() {
                 </div>
               );
             } else {
-              console.log("erro, ", IsModalVisible);
+              render(null);
             }
           }
 
+          //retorna card
           return (
             <div className="flex space-x-16 w-96 rounded-lg bg-gray-200 mx-2 mt-2 mb-2 p-10 relative">
               <div className="flex flex-col leading-10">
-                <p className="text-2xl">{obras[index].title}</p>
+                <p className="text-xl">{obras[index].title}</p>
                 <p className="mt-32 mr-4 text-lg text-gray-600">Tags</p>
                 <p className="text-sm text-gray-500">#{obras[index].tag}</p>
               </div>

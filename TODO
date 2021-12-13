@@ -2,12 +2,17 @@
     -- LOGO 
         --> Render different logos each time the page is loaded
     -- SIDE MENU
-        --> Arrumar hover das categorias
         --> Arrumar routing de tags
+        --> Hover das categorias
     -- CARDS
         --> Arrumar hover do card
+        --> Adicionar atributo de series
+        --> Adicionar cateogria "Series" com menu de drop para seleção de series
+        --> Bolar esquema de organização por data
+
     -- MODALS
         --> Arrumar clique para fechar e design do modal no geral
-
+    
+    -- BOTÃO "Voltar ao topo"
 - DATA: CREATE THE RENDER OF THE CARDS BASED ON THE ARRAY OF THE DATA CREATED.
 (OBS: WILL WE USE ANY DATABASE OR API OR SOMETHING LIKE THAT OR JUST SIMPLY LOAD THE IMAGES HERE ON THE PROJECT FOLDER AND WORK WITH THAT?)
