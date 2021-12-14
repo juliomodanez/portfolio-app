@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../Images/logo.jpg";
 
-function SideMenu() {
+function SideMenu({ handleClick }) {
   return (
     <div className="w-40">
       <div className="fixed">
@@ -10,22 +10,34 @@ function SideMenu() {
 
         <ul className="leading-10 mt-10">
           <li className="hover:bg-gray-800 hover:text-white p-2">
-            <Link to="/">Página Inicial</Link>
+            <Link to="/" onClick={() => handleClick("all")}>
+              Página Inicial
+            </Link>
           </li>
           <li className="hover:bg-gray-800 hover:text-white p-2">
-            <Link to="/esculturas">Esculturas</Link>
+            <Link to="/esculturas" onClick={() => handleClick("escultura")}>
+              Esculturas
+            </Link>
           </li>
           <li className="hover:bg-gray-800 hover:text-white p-2">
-            <Link to="/pinturas">Pinturas</Link>
+            <Link to="/pinturas" onClick={() => handleClick("pintura")}>
+              Pinturas
+            </Link>
           </li>
 
           <br />
           <li className="hover:bg-gray-800 hover:text-white p-2">
-            Bio | Contato
+            <Link to="/bio"> Bio | Contato</Link>
           </li>
-          <li className="hover:bg-gray-800 hover:text-white p-2">Projetos</li>
-          <li className="hover:bg-gray-800 hover:text-white p-2">Curriculo</li>
-          <li className="hover:bg-gray-800 hover:text-white p-2">Impresso</li>
+          <li className="hover:bg-gray-800 hover:text-white p-2">
+            <Link to="/projetos">Projetos</Link>
+          </li>
+          <li className="hover:bg-gray-800 hover:text-white p-2">
+            <Link to="/curriculo">Curriculo</Link>
+          </li>
+          <li className="hover:bg-gray-800 hover:text-white p-2">
+            <Link to="/impresso">Impresso</Link>
+          </li>
         </ul>
       </div>
     </div>
