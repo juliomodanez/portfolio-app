@@ -7,6 +7,8 @@ import images from "./Content.js";
 import SideMenu from "./Components/SideMenu";
 import Card from "./Components/Card";
 import Bio from "./Components/Bio";
+import Curriculo from "./Components/Curriculo";
+import Projetos from "./Components/Projetos";
 
 function App() {
   const [cards, setCards] = useState(images);
@@ -41,6 +43,10 @@ function App() {
             element={<Card categories={tags} allcards={cards} />}
           />
           <Route path="/bio" exact element={<Bio />} />
+          <Route path="/projetos" exact element={<Projetos/>} />
+          <Route path="/curriculo" exact element={<Curriculo />} />
+          {/* <Route path="/impresso" exact element={} /> */}
+
         </Routes>
       </div>
     </Router>

@@ -8,7 +8,7 @@ function Card({ allcards }) {
 
   const cards = allcards.map((card) => {
     return (
-      <div className="flex space-x-16 w-96 rounded-lg bg-gray-200 mx-2 mt-2 mb-2 p-10 relative">
+      <div className="flex space-x-16 w-96 rounded-lg bg-gray-200 mx-8 mt-4 mb-4 p-10 relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
         <div className="flex flex-col leading-10">
           <p className="text-xl">{card.title}</p>
           <p className="mt-32 mr-4 text-lg text-gray-600">Tags</p>
@@ -65,8 +65,8 @@ function Card({ allcards }) {
     }
   });
   return (
-    <div className="flex mt-40">
-      <div className="grid grid-cols-3">{cards}</div>
+    <div className="flex mt-48">
+      <div className="grid grid-cols-3 xl:grid-cols-4 xl:mx-16">{cards}</div>
     </div>
   );
 }

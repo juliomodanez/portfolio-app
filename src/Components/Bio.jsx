@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../Images/profile.jpg";
+import { BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 function Bio() {
   return (
@@ -14,17 +15,26 @@ function Bio() {
           histórias.
         </p>
 
-        <iframe
-          title="mylinks"
-          src="https://allmylinks.com/widget/profile/julio-modanez.html?dark=0&big=0"
-          width="395"
-          height="164"
-          className="mt-16 ml-44"
-          scrolling="no"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
+        <div className="grid grid-cols-3 ml-48 mt-32">
+          <a
+            href="https://www.instagram.com/juliomodanez/"
+            className="flex items-center mt-12 text-2xl hover:text-gray-600 "
+          >
+            {<BsInstagram className="mr-4"/>} Instagram
+          </a>
+          <a
+            href="https://www.twitter.com/juliomodanez/"
+            className="flex items-center mt-12 text-2xl hover:text-gray-600"
+          >
+            {<BsTwitter className="mr-4"/>} Twitter
+          </a>
+          <a
+            href="https://www.linkedin.com/in/julio-modanez-962079228/"
+            className="flex items-center mt-12 text-2xl hover:text-gray-600"
+          >
+            {<BsLinkedin className="mr-4"/>} Linkedin
+          </a>
+        </div>
       </div>
       <img src={profile} alt="" className="h-screen" />
     </div>

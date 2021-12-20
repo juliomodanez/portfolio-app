@@ -6,7 +6,9 @@ function SideMenu({ handleClick }) {
   return (
     <div className="w-40">
       <div className="fixed">
-        <img src={logo} alt="logo" className="mx-2 w-32" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="mx-2 w-32" />
+        </Link>
 
         <ul className="leading-10 mt-10">
           <li className="hover:bg-gray-800 hover:text-white p-2">
