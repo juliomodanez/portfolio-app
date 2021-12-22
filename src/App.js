@@ -9,6 +9,7 @@ import Card from "./Components/Card";
 import Bio from "./Components/Bio";
 import Curriculo from "./Components/Curriculo";
 import Projetos from "./Components/Projetos";
+import Impresso from "./Components/Impresso";
 
 function App() {
   const [cards, setCards] = useState(images);
@@ -45,7 +46,7 @@ function App() {
           <Route path="/bio" exact element={<Bio />} />
           <Route path="/projetos" exact element={<Projetos/>} />
           <Route path="/curriculo" exact element={<Curriculo />} />
-          {/* <Route path="/impresso" exact element={} /> */}
+          <Route path="/impresso" exact element={<Impresso/>} />
 
         </Routes>
       </div>

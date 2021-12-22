@@ -57,8 +57,9 @@ function Curriculo() {
 
           <li className="text-lg leading-10 font-medium">Exposições</li>
           <li className="leading-8 font-medium">- 2021 -</li>
-          <li className="leading-6 mt-2">nCubo</li>
-          <li className="leading-6 text-sm">Trabalho(s): Reverso</li>
+          <li className="leading-6 mt-2 font-medium">nCubo 2021</li>
+          <li className="leading-6 mt-2">Exposição digital realizada entre USP (ECA-CAP) e UNESP (IA-DeARTES).</li><li>Realização Grupo de Pesquisa Realidades ECA-USP.</li>
+          <li className="leading-6 text-sm">Trabalho(s): REVERSO</li>
         </ul>
         <button className="mt-20 mr-80 float-right bg-gray-800 text-white p-2 rounded-lg hover:bg-gray-400">
           <a href="https://google.com">Download</a>

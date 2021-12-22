@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../Images/logo.jpg";
+import logo from "../Images/logo02.jpg";
 
 function SideMenu({ handleClick }) {
   return (
     <div className="w-40">
       <div className="fixed">
-        <Link to="/">
-          <img src={logo} alt="logo" className="mx-2 w-32" />
+        <Link to="/" onClick={() => handleClick("all")}>
+          <img src={logo} alt="logo" className="mx-2 w-32 mt-6" />
         </Link>
-
+        <br />
         <ul className="leading-10 mt-10">
           <li className="hover:bg-gray-800 hover:text-white p-2">
             <Link to="/" onClick={() => handleClick("all")}>
@@ -26,13 +26,13 @@ function SideMenu({ handleClick }) {
               Pinturas
             </Link>
           </li>
+          <li className="hover:bg-gray-800 hover:text-white p-2">
+            <Link to="/projetos">Projetos</Link>
+          </li>
 
           <br />
           <li className="hover:bg-gray-800 hover:text-white p-2">
             <Link to="/bio"> Bio | Contato</Link>
-          </li>
-          <li className="hover:bg-gray-800 hover:text-white p-2">
-            <Link to="/projetos">Projetos</Link>
           </li>
           <li className="hover:bg-gray-800 hover:text-white p-2">
             <Link to="/curriculo">Curriculo</Link>
@@ -41,6 +41,12 @@ function SideMenu({ handleClick }) {
             <Link to="/impresso">Impresso</Link>
           </li>
         </ul>
+
+        <br />
+        
+        <p className="flex text-center mt-60 mx-2 text-sm text-gray-400">
+          Copyright © 2021 <br /> by Julio Modanez <br/> All Rights Reserved
+        </p>
       </div>
     </div>
   );
