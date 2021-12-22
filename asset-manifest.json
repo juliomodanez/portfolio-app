@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/portfolio-app/static/css/main.f8b4ac90.chunk.css",
+    "main.js": "/portfolio-app/static/js/main.5125e9f2.chunk.js",
+    "main.js.map": "/portfolio-app/static/js/main.5125e9f2.chunk.js.map",
+    "runtime-main.js": "/portfolio-app/static/js/runtime-main.1ad36489.js",
+    "runtime-main.js.map": "/portfolio-app/static/js/runtime-main.1ad36489.js.map",
+    "static/js/2.bab5837f.chunk.js": "/portfolio-app/static/js/2.bab5837f.chunk.js",
+    "static/js/2.bab5837f.chunk.js.map": "/portfolio-app/static/js/2.bab5837f.chunk.js.map",
+    "index.html": "/portfolio-app/index.html",
+    "static/css/main.f8b4ac90.chunk.css.map": "/portfolio-app/static/css/main.f8b4ac90.chunk.css.map",
+    "static/js/2.bab5837f.chunk.js.LICENSE.txt": "/portfolio-app/static/js/2.bab5837f.chunk.js.LICENSE.txt",
+    "static/media/Cuboprint.984b7e6d.png": "/portfolio-app/static/media/Cuboprint.984b7e6d.png",
+    "static/media/Ferreiro.5a8188d6.jpg": "/portfolio-app/static/media/Ferreiro.5a8188d6.jpg",
+    "static/media/IMG_6553.7eeaee1e.png": "/portfolio-app/static/media/IMG_6553.7eeaee1e.png",
+    "static/media/IMG_6555.93d47ac6.png": "/portfolio-app/static/media/IMG_6555.93d47ac6.png",
+    "static/media/IMG_6560.6038d99a.png": "/portfolio-app/static/media/IMG_6560.6038d99a.png",
+    "static/media/IMG_6563.99a4de04.png": "/portfolio-app/static/media/IMG_6563.99a4de04.png",
+    "static/media/IMG_6571.6adc8d98.png": "/portfolio-app/static/media/IMG_6571.6adc8d98.png",
+    "static/media/Mountain.96dbc00d.jpg": "/portfolio-app/static/media/Mountain.96dbc00d.jpg",
+    "static/media/bailarina_01.46383008.jpg": "/portfolio-app/static/media/bailarina_01.46383008.jpg",
+    "static/media/barb_01.7e36d459.jpg": "/portfolio-app/static/media/barb_01.7e36d459.jpg",
+    "static/media/box_01.8c252d35.jpg": "/portfolio-app/static/media/box_01.8c252d35.jpg",
+    "static/media/cabeca_01.70210454.jpg": "/portfolio-app/static/media/cabeca_01.70210454.jpg",
+    "static/media/camp_01.c1a149e2.jpg": "/portfolio-app/static/media/camp_01.c1a149e2.jpg",
+    "static/media/harp_01.7e98bcbd.jpg": "/portfolio-app/static/media/harp_01.7e98bcbd.jpg",
+    "static/media/inu_01.899f7f83.jpg": "/portfolio-app/static/media/inu_01.899f7f83.jpg",
+    "static/media/logo02.653a81ac.jpg": "/portfolio-app/static/media/logo02.653a81ac.jpg",
+    "static/media/monk_01.8d2ea238.jpg": "/portfolio-app/static/media/monk_01.8d2ea238.jpg",
+    "static/media/p5.f0b14aec.PNG": "/portfolio-app/static/media/p5.f0b14aec.PNG",
+    "static/media/profile.f2d0f12c.jpg": "/portfolio-app/static/media/profile.f2d0f12c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ad36489.js",
+    "static/js/2.bab5837f.chunk.js",
+    "static/css/main.f8b4ac90.chunk.css",
+    "static/js/main.5125e9f2.chunk.js"
+  ]
+}
