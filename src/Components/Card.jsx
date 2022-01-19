@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
-import React from "react";
-import { useState } from "react/cjs/react.development";
+import React, { useState } from "react";
 
 function Card({ allcards }) {
   const [IsModalVisible, setIsModalVisible] = useState(false);
@@ -8,10 +7,10 @@ function Card({ allcards }) {
 
   const cards = allcards.map((card) => {
     return (
-      <div className="flex space-x-16 w-full h-full rounded-lg bg-gray-100 mx-12 mb-4 p-8 relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
+      <div className="flex space-x-16 rounded-lg bg-gray-100 mb-4 mx-10 max-h-30 p-24 sm:p-16 sm:mx-12 xl:p-8 xl:w-full xl:h-full relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
         <div className="flex flex-col leading-10 mr-10">
-          <p className="text-xl">{card.title}</p>
-          <p className="mt-10 text-justify text-sm pr-8">{card.description}</p>
+          <p className="sm:text-xl">{card.title}</p>
+          <p className="text-justify text-xs mt-32 sm:mt-10 sm:pr-8">{card.description}</p>
           <p className=" absolute inset-y-0 top-80 mr-4 text-lg text-gray-600">
             Tags
           </p>
@@ -26,11 +25,15 @@ function Card({ allcards }) {
             className="object-contain max-h-64 absolute inset-y-0 top-20 right-8"
             // onClick={() => modal()}
           />
-          <li className="mt-74 -ml-16 text-xs text-gray-500 list-none	text-right">{card.tecInfo[0]}</li>
-          <li className="-ml-16 text-xs text-gray-500 list-none	text-right">{card.tecInfo[1]}</li>
-          <li className="-ml-16 text-xs text-gray-500 list-none	text-right">{card.tecInfo[2]}</li>
-
-
+          <li className="mt-74 -ml-16 text-xs text-gray-500 list-none	text-right">
+            {card.tecInfo[0]}
+          </li>
+          <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
+            {card.tecInfo[1]}
+          </li>
+          <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
+            {card.tecInfo[2]}
+          </li>
         </div>
       </div>
     );
@@ -79,7 +82,7 @@ function Card({ allcards }) {
 
   return (
     <div className="flex mt-48">
-      <div className="grid grid-cols-2 gap-6 xl:grid-cols-3 xl:mx-16">
+      <div className="grid gap-6 grid-cols-1 xl:grid-cols-2 xl:mx-16 2xl:grid-cols-3">
         {cards}
       </div>
     </div>

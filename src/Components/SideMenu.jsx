@@ -4,13 +4,13 @@ import logo from "../Images/logo02.jpg";
 
 function SideMenu({ handleClick }) {
   return (
-    <div className="w-40">
+    <div className="w-10 mr-10 sm:w-40 sm:mr-20 xl:mr-4">
       <div className="fixed">
         <Link to="/" onClick={() => handleClick("all")}>
-          <img src={logo} alt="logo" className="mx-2 w-32 mt-6" />
+          <img src={logo} alt="logo" className="mx-2 mt-6 w-16 sm:w-32" />
         </Link>
         <br />
-        <ul className="leading-10 mt-10">
+        <ul className="leading-6 mt-4 text-xs sm:text-lg sm:leading-10 sm:mt-10">
           <li className="hover:bg-gray-800 hover:text-white p-2">
             <Link to="/" onClick={() => handleClick("all")}>
               Página Inicial
@@ -35,16 +35,16 @@ function SideMenu({ handleClick }) {
             <Link to="/bio"> Bio | Contato</Link>
           </li>
           <li className="hover:bg-gray-800 hover:text-white p-2">
-            <Link to="/curriculo">Curriculo</Link>
+            <Link to="/curriculo">Currículo</Link>
           </li>
-          <li className="hover:bg-gray-800 hover:text-white p-2">
+          {/* <li className="hover:bg-gray-800 hover:text-white p-2">
             <Link to="/impresso">Impresso</Link>
-          </li>
+          </li> */}
         </ul>
 
         <br />
         
-        <p className="flex text-center mt-60 mx-2 text-sm text-gray-400">
+        <p className="flex text-center mt-60 mx-2 text-xs sm:text-sm text-gray-400">
           Copyright © 2021 <br /> by Julio Modanez <br/> All Rights Reserved
         </p>
       </div>
