@@ -11,16 +11,36 @@ function Card({ allcards }) {
         <div className="flex space-x-16 rounded-lg bg-gray-100 mb-4 mx-10 max-h-30 p-24 sm:p-16 sm:mx-12 xl:p-8 xl:w-full xl:h-full relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
           <div className="flex">
             <p className="absolute top-10 mr-24 sm:text-xl">{card.title}</p>
-            <p className="absolute top-10 right-20 text-lg text-gray-600">Tags</p>
-            <p className="absolute top-10 right-10 text-right text-lg text-gray-600">#{card.tags}</p>
+            <p className="absolute top-10 right-20 text-lg text-gray-600">
+              Tags
+            </p>
+            <p className="absolute top-10 right-10 text-right text-lg text-gray-600">
+              #{card.tags}
+            </p>
           </div>
           <div className="py-4 w-full">
-            <img
-              src={card.source}
-              alt=""
-              className="object-contain max-h-64 absolute inset-y-0 top-20 right-10 place-self-center"
-              // onClick={() => modal()}
-            />
+            {card.tecInfo[0] === "animação 3D" ? (
+              <iframe
+                title="video"
+                className="object-center object-contain max-h-80 absolute top-20 right-10 w-3/4"
+                src={card.source}
+              ></iframe>
+            ) : card.type === "pequena" ? (
+              <img
+                src={card.source}
+                alt=""
+                className="object-center object-contain max-h-64 absolute top-20 right-36"
+                // onClick={() => modal()}
+              />
+            ) : (
+              <img
+                src={card.source}
+                alt=""
+                className="object-center object-contain max-h-64 absolute inset-y-0 top-20 right-6"
+                // onClick={() => modal()}
+              />
+            )}
+
             <li className="mt-74 -ml-16 text-xs text-gray-500 list-none text-center">
               {card.tecInfo[0]}
             </li>
@@ -31,10 +51,9 @@ function Card({ allcards }) {
               {card.tecInfo[2]}
             </li>
             <p className="text-justify text-xs sm:mt-10 sm:pr-8">
-            {card.description}
-          </p>
+              {card.description}
+            </p>
           </div>
-          
         </div>
       );
     } else {

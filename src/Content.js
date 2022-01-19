@@ -20,6 +20,8 @@ import Watermill025 from "./Images/watermill_025.png"
 import Donut from "./Images/Donut.png"
 import RoomVideo from "./videos/0002.mp4"
 
+//"animação 3D"
+
 const images = [
   {
     title: "Quarto (em andamento)",
@@ -47,6 +49,7 @@ const images = [
     serie:"",
     source: Watermill025,
     altImages: [],
+    type:'pequena',
     },
   {
     title: "Bigorna",
@@ -64,6 +67,7 @@ const images = [
     serie:"",
     source: Donut,
     altImages: [],
+    type:'pequena',
     },
   {
     title: "Estudo sobre plantas 1",
