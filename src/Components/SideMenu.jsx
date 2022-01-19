@@ -27,6 +27,11 @@ function SideMenu({ handleClick }) {
             </Link>
           </li>
           <li className="hover:bg-gray-800 hover:text-white p-2">
+            <Link to="/modelagem3D" onClick={() => handleClick("3D")}>
+              Modelagem 3D
+            </Link>
+          </li>
+          <li className="hover:bg-gray-800 hover:text-white p-2">
             <Link to="/projetos">Projetos</Link>
           </li>
 

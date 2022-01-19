@@ -43,6 +43,11 @@ function App() {
             exact
             element={<Card categories={tags} allcards={cards} />}
           />
+          <Route
+            path="/modelagem3D"
+            exact
+            element={<Card categories={tags} allcards={cards} />}
+          />
           <Route path="/bio" exact element={<Bio />} />
           <Route path="/projetos" exact element={<Projetos/>} />
           <Route path="/curriculo" exact element={<Curriculo />} />

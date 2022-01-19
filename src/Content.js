@@ -13,8 +13,58 @@ import Inu from "./Images/inu_01.jpg"
 import Monge from "./Images/monk_01.jpg"
 import Mountain from "./Images/Mountain.jpg"
 import Ferreiro from "./Images/Ferreiro.jpg"
+import Anvil from "./Images/anvil.png" 
+import Telhados from "./Images/telhados_001.png"
+import Room026 from "./Images/TheRoom_026.png"
+import Watermill025 from "./Images/watermill_025.png"
+import Donut from "./Images/Donut.png"
+import RoomVideo from "./videos/0002.mp4"
 
 const images = [
+  {
+    title: "Quarto",
+    description: "sssssssssssssssss",
+    tecInfo: ["dadad"],
+    tags: "3D",
+    serie:"",
+    source: Room026,
+    altImages: [],
+    },
+  {
+    title: "Telhados",
+    description: "fasidnfopiasdnfpoinasdfoinaspoçdfinasoidfnapoçsdinfçpoasdnfoçpasindfdopas",
+    tecInfo: [""],
+    tags: "3D",
+    serie:"",
+    source: Telhados,
+    altImages: [],
+    },
+  {
+    title: "Moinho",
+    description: "r´pqwnmropqwnfpoqwnfíqn2wrfo´qiwneroíqnwero´qi nweónriqweónrqwóienr´~askdmvn´pisdfjgmv",
+    tecInfo: ["dasdasdas", "jahsdasuhduhu"],
+    tags: "3D",
+    serie:"",
+    source: Watermill025,
+    altImages: [],
+    },
+  {
+    title: "Bigorna",
+    description: "dqwidnjfpoa\nfpo0awsifn0sanfoasndfóiansd´foinasóifnasídfna´soidnf",
+    tecInfo: [""],
+    tags: "3D",
+    serie:"",
+    source: Anvil,
+    altImages: [],
+    },{
+    title: "Donut",
+    description: "",
+    tecInfo: ["façowsfnbóasndfóiasndfíansd´finasífnasóifnasdífnas´din"],
+    tags: "3D",
+    serie:"",
+    source: Donut,
+    altImages: [],
+    },
   {
     title: "Estudo sobre plantas 1",
     description: "Pertencente a série de estudos sobre técnicas de pintura; as pinturas também se dedicam ao estudo de plantas. Como primeira obra da série, parte de uma tinta caseira e mais simples, feita a base de água, pigmento e cola. Busca entender não só a dinâmica de trabalho com esta tinta mas também a representação da forma e das cores.",

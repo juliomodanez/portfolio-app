@@ -6,38 +6,72 @@ function Card({ allcards }) {
   let obras = [];
 
   const cards = allcards.map((card) => {
-    return (
-      <div className="flex space-x-16 rounded-lg bg-gray-100 mb-4 mx-10 max-h-30 p-24 sm:p-16 sm:mx-12 xl:p-8 xl:w-full xl:h-full relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
-        <div className="flex flex-col leading-10 mr-10">
-          <p className="sm:text-xl">{card.title}</p>
-          <p className="text-justify text-xs mt-32 sm:mt-10 sm:pr-8">{card.description}</p>
-          <p className=" absolute inset-y-0 top-80 mr-4 text-lg text-gray-600">
-            Tags
+    if (card.tags === "3D") {
+      return (
+        <div className="flex space-x-16 rounded-lg bg-gray-100 mb-4 mx-10 max-h-30 p-24 sm:p-16 sm:mx-12 xl:p-8 xl:w-full xl:h-full relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
+          <div className="flex">
+            <p className="absolute top-10 mr-24 sm:text-xl">{card.title}</p>
+            <p className="absolute top-10 right-20 text-lg text-gray-600">Tags</p>
+            <p className="absolute top-10 right-10 text-right text-lg text-gray-600">#{card.tags}</p>
+          </div>
+          <div className="py-4 w-full">
+            <img
+              src={card.source}
+              alt=""
+              className="object-contain max-h-64 absolute inset-y-0 top-20 right-10 place-self-center"
+              // onClick={() => modal()}
+            />
+            <li className="mt-74 -ml-16 text-xs text-gray-500 list-none text-center">
+              {card.tecInfo[0]}
+            </li>
+            <li className="-ml-16 text-xs text-gray-500 list-none text-center">
+              {card.tecInfo[1]}
+            </li>
+            <li className="-ml-16 text-xs text-gray-500 list-none text-center">
+              {card.tecInfo[2]}
+            </li>
+            <p className="text-justify text-xs sm:mt-10 sm:pr-8">
+            {card.description}
           </p>
-          <p className="absolute inset-y-0 top-80 mt-8 text-sm text-gray-500">
-            #{card.tags}
-          </p>
+          </div>
+          
         </div>
-        <div className="py-4 w-full">
-          <img
-            src={card.source}
-            alt=""
-            className="object-contain max-h-64 absolute inset-y-0 top-20 right-8"
-            // onClick={() => modal()}
-          />
-          <li className="mt-74 -ml-16 text-xs text-gray-500 list-none	text-right">
-            {card.tecInfo[0]}
-          </li>
-          <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
-            {card.tecInfo[1]}
-          </li>
-          <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
-            {card.tecInfo[2]}
-          </li>
+      );
+    } else {
+      return (
+        <div className="flex space-x-16 rounded-lg bg-gray-100 mb-4 mx-10 max-h-30 p-24 sm:p-16 sm:mx-12 xl:p-8 xl:w-full xl:h-full relative hover:shadow-lg bg-gradient-to-t hover:from-gray-300 hover:via-gray-200 hover:to-gray-200">
+          <div className="flex flex-col leading-10 mr-10">
+            <p className="sm:text-xl">{card.title}</p>
+            <p className="text-justify text-xs mt-32 sm:mt-10 sm:pr-8">
+              {card.description}
+            </p>
+            <p className=" absolute inset-y-0 top-80 mr-4 text-lg text-gray-600">
+              Tags
+            </p>
+            <p className="absolute inset-y-0 top-80 mt-8 text-sm text-gray-500">
+              #{card.tags}
+            </p>
+          </div>
+          <div className="py-4 w-full">
+            <img
+              src={card.source}
+              alt=""
+              className="object-contain max-h-64 absolute inset-y-0 top-20 right-8"
+              // onClick={() => modal()}
+            />
+            <li className="mt-74 -ml-16 text-xs text-gray-500 list-none	text-right">
+              {card.tecInfo[0]}
+            </li>
+            <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
+              {card.tecInfo[1]}
+            </li>
+            <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
+              {card.tecInfo[2]}
+            </li>
+          </div>
         </div>
-      </div>
-    );
-
+      );
+    }
     function modal() {
       setIsModalVisible(true);
       obras.filter((obra) => obra.source === card.source);
