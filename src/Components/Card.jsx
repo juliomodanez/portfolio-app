@@ -18,30 +18,38 @@ function Card({ allcards }) {
               #{card.tags}
             </p>
           </div>
-          <div className="py-4 w-full">
-            {card.tecInfo[0] === "animação 3D" ? (
-              <iframe
-                title="video"
-                className="object-center object-contain max-h-80 absolute top-20 right-10 w-3/4"
-                src={card.source}
-              ></iframe>
+          <div className="py-4">
+            {card.tecInfo[0] === "Animação 3D" ? (
+              card.type === "pequena" ? (
+                <iframe
+                  title="video"
+                  className="mx-16 mt-12 h-60 w-60 absolute"
+                  src={card.source}
+                ></iframe>
+              ) : (
+                <iframe
+                  title="video"
+                  className="mx-12 mt-28 h-47 w-82 absolute xl:right-16"
+                  src={card.source}
+                ></iframe>
+              )
             ) : card.type === "pequena" ? (
               <img
                 src={card.source}
                 alt=""
-                className="object-center object-contain max-h-64 absolute top-20 right-36"
+                className="object-center object-contain max-h-64 absolute top-20 xl:top-24 right-36 xl:right-44"
                 // onClick={() => modal()}
               />
             ) : (
               <img
                 src={card.source}
                 alt=""
-                className="object-center object-contain max-h-64 absolute inset-y-0 top-20 right-6"
+                className="object-center object-contain max-h-64 absolute inset-y-0 top-20 xl:top-24 right-6 xl:right-12"
                 // onClick={() => modal()}
               />
             )}
 
-            <li className="mt-74 -ml-16 text-xs text-gray-500 list-none text-center">
+            <li className="mt-76 -ml-16 text-xs text-gray-500 list-none text-center">
               {card.tecInfo[0]}
             </li>
             <li className="-ml-16 text-xs text-gray-500 list-none text-center">
@@ -49,6 +57,9 @@ function Card({ allcards }) {
             </li>
             <li className="-ml-16 text-xs text-gray-500 list-none text-center">
               {card.tecInfo[2]}
+            </li>
+            <li className="-ml-16 text-xs text-gray-500 list-none text-center">
+              {card.tecInfo[3]}
             </li>
             <p className="text-justify text-xs sm:mt-10 sm:pr-8">
               {card.description}
@@ -86,6 +97,9 @@ function Card({ allcards }) {
             </li>
             <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
               {card.tecInfo[2]}
+            </li>
+            <li className="-ml-16 text-xs text-gray-500 list-none	text-right">
+              {card.tecInfo[3]}
             </li>
           </div>
         </div>

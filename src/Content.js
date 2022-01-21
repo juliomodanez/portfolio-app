@@ -17,15 +17,22 @@ import Anvil from "./Images/anvil.png"
 import Telhados from "./Images/telhados_001.png"
 import Room026 from "./Images/TheRoom_026.png"
 import Watermill025 from "./Images/watermill_025.png"
-import Donut from "./Images/Donut.png"
+import Donut from "./videos/0001_1.mp4"
 import RoomVideo from "./videos/0002.mp4"
-
-//"animação 3D"
 
 const images = [
   {
     title: "Quarto (em andamento)",
-    description: "Meu projeto mais recente se trata de uma manimação na qual pretendo aplicar os conceitos de animação aprendidos em aula. O projeto ainda procura explorar e aplicar diversos recursos e ideias estudadas e desenvolvidas ao longo de um ano de estudo dentro do Blender.",
+    description: "Meu projeto mais recente se trata de uma animação na qual pretendo aplicar os conceitos de animação aprendidos em aula. O projeto ainda procura explorar e aplicar diversos recursos e ideias estudadas e desenvolvidas ao longo de um ano de estudo dentro do Blender.",
+    tecInfo: ["Animação 3D","Modelagem 3D","Blender","2021"],
+    tags: "3D",
+    serie:"",
+    source: RoomVideo,
+    altImages: [],
+    },
+  {
+    title: "Quarto (em andamento)",
+    description: "Meu projeto mais recente se trata de uma animação na qual pretendo aplicar os conceitos de animação aprendidos em aula. O projeto ainda procura explorar e aplicar diversos recursos e ideias estudadas e desenvolvidas ao longo de um ano de estudo dentro do Blender.",
     tecInfo: ["Modelagem 3D","Blender","2021"],
     tags: "3D",
     serie:"",
@@ -43,7 +50,7 @@ const images = [
     },
   {
     title: "Moinho (em andamento)",
-    description: "Como meu primeiro projeto pessoal, o tarbalho partiu da ideia de modelar uma roda da agua e a partir dela surgiu a inspiração para o restante da animação.",
+    description: "Como meu primeiro projeto pessoal, o trabalho partiu da ideia de modelar uma roda d'água e a partir dela surgiu a inspiração para o restante da animação.",
     tecInfo: ["Modelagem 3D","Blender","2021"],
     tags: "3D",
     serie:"",
@@ -62,7 +69,7 @@ const images = [
     },{
     title: "Donut",
     description: "Primeiro trabalho em 3D realizado no Blender. O projeto, além de estudo do software e da modelagem 3D, foi também uma forma de explorar as possibilidades do programa.",
-    tecInfo: ["Modelagem 3D","Blender","2021"],
+    tecInfo: ["Animação 3D","Modelagem 3D","Blender","2021"],
     tags: "3D",
     serie:"",
     source: Donut,
