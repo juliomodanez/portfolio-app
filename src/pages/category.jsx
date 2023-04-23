@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box, ImageList, ImageListItem, Modal, Typography } from '@mui/material'
+import '@fontsource/cinzel'
 
 const style = {
     position: 'absolute',
@@ -11,7 +12,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-};
+} ;
 
 function Category({ allContent }) {
     const [open, setOpen] = useState(false);
