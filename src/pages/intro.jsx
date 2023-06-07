@@ -1,35 +1,41 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import content from "../Content.js";
+import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import '@fontsource/dosis/200.css';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 function SwipeableTextMobileStepper() {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = content.length;
-
-    const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
 
     const handleStepChange = (step) => {
         setActiveStep(step);
     };
 
     return (
-        <Box sx={{ maxWidth: window.innerWidth, flexGrow: 1 }}>
+        <div sx={{ position: 'relative', maxWidth: '100%' }}>
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    textAlign: 'center',
+                    padding: '20px',
+                    color: 'white',
+                    zIndex: 999,
+                }}
+            >
+                <Typography style={{ fontFamily: 'Cinzel', fontSize: '10vh' }}>Julio Modanez</Typography>
+
+            </Box>
             <AutoPlaySwipeableViews interval={7000}
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
@@ -48,43 +54,41 @@ function SwipeableTextMobileStepper() {
                                 overflow: 'hidden',
                                 width: '100%',
                                 zIndex: 'modal',
+                                filter:'brightness(110%) saturate(0.75) grayscale(10%)'
                             }}
                             src={image.source}
                         />
                     ) : null
                 ))}
             </AutoPlaySwipeableViews>
-            <MobileStepper
-                sx={{ background: 'transparent' }}
-                steps={maxSteps}
-                activeStep={activeStep}
-                nextButton={
-                    <Button
-                        size="small"
-                        onClick={handleNext}
-                        disabled={activeStep === maxSteps - 1}
-                        sx={{ color: 'white' }}
-                    >
-                        Next
-                        {theme.direction === 'rtl' ? (
-                            <KeyboardArrowLeft />
-                        ) : (
-                            <KeyboardArrowRight />
-                        )}
-                    </Button>
-                }
-                backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0} sx={{ color: 'white' }}>
-                        {theme.direction === 'rtl' ? (
-                            <KeyboardArrowRight />
-                        ) : (
-                            <KeyboardArrowLeft />
-                        )}
-                        Back
-                    </Button>
-                }
-            />
-        </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'fixed',
+                    bottom: 0,
+                    left: 0,
+                    width: '100%',
+                    padding: '20px',
+                    color: 'white',
+                    zIndex: 999,
+                }}
+            >
+                <Button style={{textTransform: 'none'}}>
+                    <Link to="/inicial" style={{
+                        fontFamily: 'Dosis', fontSize:'1.75rem', fontWeight: 'bold', textDecoration: 'none', color: 'white', padding: '50px 25px'
+                    }}>
+                        Explorar
+                    </Link>
+                </Button>
+                <Typography style={{
+                    fontFamily: 'Dosis', textDecoration: 'none', color: 'white'
+                }}
+                >Copyright © 2021 by Julio Modanez</Typography>
+            </Box>
+        </div>
     );
 }
 
