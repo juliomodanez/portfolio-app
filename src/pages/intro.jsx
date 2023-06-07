@@ -11,7 +11,7 @@ import '@fontsource/dosis/200.css';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function SwipeableTextMobileStepper() {
+function Intro() {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -92,4 +92,4 @@ function SwipeableTextMobileStepper() {
     );
 }
 
-export default SwipeableTextMobileStepper;
+export default Intro;

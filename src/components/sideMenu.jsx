@@ -32,7 +32,7 @@ function SideMenu({ handleClick }) {
                 }}
             >
                 <MenuItem>
-                    <Link to="/" onClick={() => handleClick("all")} >
+                    <Link to="/inicial" onClick={() => handleClick("all")} >
                         Página Inicial
                     </Link>
                 </MenuItem>
