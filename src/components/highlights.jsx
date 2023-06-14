@@ -29,7 +29,7 @@ function Highlights() {
     };
 
     return (
-        <div style={{ backgroundColor: 'black', paddingInline: '4vw' }}>
+        <div style={{ backgroundColor: 'black', paddingInline: '4vw', position: 'relative', height: '100vh' }}>
             <AutoPlaySwipeableViews interval={7000}
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
@@ -60,22 +60,22 @@ function Highlights() {
                     paddingInline: '4vw',
                     background: 'transparent',
                     position: 'absolute',
-                    top: '100%',
-                    transform: 'translate(0%, 200%)',
                     zIndex: 1,
                     '& .MuiMobileStepper-dot': {
-                        backgroundColor: 'grey', // customize the inactive indicator color
+                        backgroundColor: 'grey',
                     },
                     '& .MuiMobileStepper-dotActive': {
-                        backgroundColor: 'white', // customize the active indicator color
+                        backgroundColor: 'white',
                     },
-                    
+                    '& button': {
+                        transform: 'translateY(-50vh)'
+                    },
                 }}
                 steps={maxSteps}
                 activeStep={activeStep}
                 nextButton={
                     <Button
-                        size="small"
+                        size="large"
                         onClick={handleNext}
                         disabled={activeStep === maxSteps - 1}
                         sx={{ color: 'white' }}
@@ -88,7 +88,11 @@ function Highlights() {
                     </Button>
                 }
                 backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0} sx={{ color: 'white' }}>
+                    <Button
+                        size="large"
+                        onClick={handleBack}
+                        disabled={activeStep === 0}
+                        sx={{ color: 'white' }}>
                         {theme.direction === 'rtl' ? (
                             <KeyboardArrowRight />
                         ) : (

@@ -20,12 +20,12 @@ function Category({ allContent }) {
     const handleClose = () => setOpen(false);
 
     return (
-        <div style={{ backgroundColor: 'black', paddingInline:'4vw' }}>
+        <div style={{ backgroundColor: 'black', paddingInline: '4vw' }}>
             <ImageList
                 variant="masonry"
                 cols={3}
                 gap={4}
-                style={{margin:'0'}}
+                style={{ margin: '0' }}
             >
                 {allContent.map((item) => (
                     <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
