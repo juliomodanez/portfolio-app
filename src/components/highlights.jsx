@@ -49,6 +49,7 @@ function Highlights() {
                                 width: '100%',
                             }}
                             src={image.source}
+                            key={index}
                         />
                     ) : null
                 ))}

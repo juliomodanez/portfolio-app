@@ -12,20 +12,9 @@ import WalletIcon from '@mui/icons-material/Wallet';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 
 function SideMenu({ handleClick }) {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
     return (
         <Paper sx={{ position: 'fixed', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }}>
-            <MenuList
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-            >
+            <MenuList            >
                 <MenuItem>
                     <Link to="/inicial" onClick={() => handleClick("all")} >
                         <HomeIcon sx={{ textDecoration: 'none', color: 'white' }} />
