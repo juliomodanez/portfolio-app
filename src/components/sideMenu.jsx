@@ -1,83 +1,78 @@
-import { Button, Menu, MenuItem } from "@mui/material";
+import { MenuItem, MenuList, Paper } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import CarpenterIcon from '@mui/icons-material/Carpenter';
+import CreateIcon from '@mui/icons-material/Create';
+import ViewInArIcon from '@mui/icons-material/ViewInAr';
+import BrushIcon from '@mui/icons-material/Brush';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import WalletIcon from '@mui/icons-material/Wallet';
+import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 
 function SideMenu({ handleClick }) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    const click = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
+
     const handleClose = () => {
         setAnchorEl(null);
     };
+
     return (
-        <div>
-            <Button
-                id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={click}
-            >
-                Menu
-            </Button>
-            <Menu
-                id="basic-menu"
+        <Paper sx={{ position: 'fixed', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }}>
+            <MenuList
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
             >
                 <MenuItem>
                     <Link to="/inicial" onClick={() => handleClick("all")} >
-                        Página Inicial
+                        <HomeIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/esculturas" onClick={() => handleClick("escultura")}>
-                        Esculturas
+                        <CarpenterIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/pinturas" onClick={() => handleClick("pintura")}>
-                        Pinturas
+                        <ColorLensIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/gravuras" onClick={() => handleClick("gravura")}>
-                        Gravuras
+                        <CreateIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/modelagem3D" onClick={() => handleClick("3D")}>
-                        Modelagem 3D
+                        <ViewInArIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/pinturadigital" onClick={() => handleClick("digital")}>
-                        Pintura Digital
+                        <BrushIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/animacao" onClick={() => handleClick("animacao")}>
-                        Animação
+                        <LocalMoviesIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/bio">
-                        Bio
+                        <AccountCircleIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/contato">
-                        Contato
+                        <WalletIcon sx={{ textDecoration: 'none', color: 'white' }} />
                     </Link>
                 </MenuItem>
-            </Menu>
-        </div>
+            </MenuList>
+        </Paper>
     );
 }
 
