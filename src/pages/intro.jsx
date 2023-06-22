@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import content from "../Content.js";
+import content from '../contents/Content_Intro.js'
 import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import '@fontsource/dosis/200.css';

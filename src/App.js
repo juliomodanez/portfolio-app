@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SideMenu from "./components/sideMenu";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Category from "./components/category";
-import Content from './Content'
+import Content from './contents/Content'
 import IntroCarousel from "./pages/intro";
 import Home from './pages/home';
 
