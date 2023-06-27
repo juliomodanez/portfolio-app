@@ -43,6 +43,14 @@ import Mfad09 from "../images/mfad/IMG_1966.jpg"
 import Monge from "../images/monk_01.jpg"
 import MoonPic from "../images/IMG_1837.jpg"
 import Mountain from "../images/Mountain.jpg"
+import PlantPaint0001 from "../images/IMG_6560.png"
+import PlantPaint0002 from "../images/IMG_6563.png"
+import PlantPaint0003 from "../images/IMG_6571.png"
+import PlantPaint0004 from "../images/IMG_6553.png"
+import PlantPaint0005 from "../images/IMG_6555.png"
+import Roomimg from "../images/TheRoom_026.png"
+import RoomVideo from "../videos/0002.mp4"
+import Telhados from "../images/telhados_001.png"
 import TreeTrunk01 from "../images/tree_trunk/IMG_1850.jpg"
 import TreeTrunk02 from "../images/tree_trunk/IMG_1853.jpg"
 import Underpass01 from "../images/underpass/IMG_1880.jpg"
@@ -59,14 +67,6 @@ import Underpass11 from "../images/underpass/IMG_1907.jpg"
 import Underpass12 from "../images/underpass/IMG_1912.jpg"
 import Underpass13 from "../images/underpass/IMG_1916.jpg"
 import Underpass14 from "../images/underpass/IMG_1923.jpg"
-import PlantPaint0001 from "../images/IMG_6560.png"
-import PlantPaint0002 from "../images/IMG_6563.png"
-import PlantPaint0003 from "../images/IMG_6571.png"
-import PlantPaint0004 from "../images/IMG_6553.png"
-import PlantPaint0005 from "../images/IMG_6555.png"
-import Roomimg from "../images/TheRoom_026.png"
-import RoomVideo from "../videos/0002.mp4"
-import Telhados from "../images/telhados_001.png"
 import Watermill from "../images/watermill_025.png"
 
 const content = [
@@ -78,7 +78,9 @@ const content = [
     serie: "",
     source: Anvil,
     altImages: [],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Bailarina",
     description: "Junto com o Boxeador, a Bailarina busca esplorar o movimento. Como grande representação do movimento buscou-se na dança a inspiração.",
     tecInfo: ["Oilclay sobre base de madeira", "", "2016"],
@@ -86,7 +88,9 @@ const content = [
     serie: "0001",
     source: Bailarina01,
     altImages: [Bailarina02],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Bailarina em aquarela",
     description: "",
     tecInfo: ["", "", ""],
@@ -94,7 +98,9 @@ const content = [
     serie: "",
     source: BailarinaAqua,
     altImages: [],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Bárbaro",
     description: "Como primeira escultura de série explora principalmente a concepção do personagem.",
     tecInfo: ["Oilclay sobre base de madeira", "", "2016"],
@@ -102,7 +108,9 @@ const content = [
     serie: "0001",
     source: Barbaro,
     altImages: [],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Boxeador",
     description: "Esta peça faz par com a Bailarina e o par foi pensado de modo a explorar o movimento. Enquanto na Bailarina temos o movimento congelado no Boxeador o movimento esta repousado, aguardando, esperando para continuar a luta.",
     tecInfo: ["Oilclay sobre base de madeira", "", "2016"],
@@ -110,6 +118,7 @@ const content = [
     serie: "0001",
     source: Boxeador01,
     altImages: [Boxeador02],
+    data_publicacao: "",
   },
   {
     title: "The old man",
@@ -119,7 +128,9 @@ const content = [
     serie: "",
     source: Cabeca,
     altImages: [],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Camponesa no rio",
     description: "A peça foi pensada de modo a explorar a relação da personagem com o cenário.",
     tecInfo: ["Oilclay sobre base de madeira", "", "2016"],
@@ -127,7 +138,9 @@ const content = [
     serie: "0001",
     source: Camp001,
     altImages: [],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Encosta 01",
     description: "",
     tecInfo: ["", "", ""],
@@ -135,7 +148,9 @@ const content = [
     serie: "",
     source: Coast01_01,
     altImages: [Coast01_02],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Encosta 02",
     description: "",
     tecInfo: ["", "", ""],
@@ -143,7 +158,9 @@ const content = [
     serie: "",
     source: Coast02_01,
     altImages: [Coast02_02],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Encosta 03",
     description: "",
     tecInfo: ["", "", ""],
@@ -151,7 +168,9 @@ const content = [
     serie: "",
     source: Coast03_01,
     altImages: [Coast03_02, Coast03_03, Coast03_04],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Encosta 04",
     description: "",
     tecInfo: ["", "", ""],
@@ -159,6 +178,7 @@ const content = [
     serie: "",
     source: Coast04_01,
     altImages: [Coast04_02],
+    data_publicacao: "",
   },
   {
     title: "Donut",
@@ -169,7 +189,9 @@ const content = [
     source: Donutimg,
     altImages: [Donutgif, Donutvid],
     type: 'pequena',
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Drown",
     description: "",
     tecInfo: ["", "", ""],
@@ -177,6 +199,7 @@ const content = [
     serie: "",
     source: Drown,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Filho da Harpia",
@@ -186,7 +209,9 @@ const content = [
     serie: "0001",
     source: FilhoHarpia01,
     altImages: [FilhoHarpia02],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Peixe",
     description: "",
     tecInfo: ["", "", ""],
@@ -194,7 +219,9 @@ const content = [
     serie: "",
     source: Fish01,
     altImages: [Fish02, Fish03],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Ferreiro",
     description: "A obra busca entender melhor a confecção de detalhes, com vestuários mais complexo e feito por camadas.",
     tecInfo: ["Oilclay sobre base de madeira", "", "2016"],
@@ -202,6 +229,7 @@ const content = [
     serie: "0001",
     source: Ferreiro,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Inuit",
@@ -211,7 +239,9 @@ const content = [
     serie: "0001",
     source: Inu,
     altImages: [],
-  }, {
+    data_publicacao: "",
+  },
+  {
     title: "Senhora do escuro",
     description: "",
     tecInfo: ["", "", ""],
@@ -219,15 +249,19 @@ const content = [
     serie: "",
     source: Lady01,
     altImages: [Lady02, Lady03],
-  },  {
+    data_publicacao: "",
+  },
+  {
     title: "Memorias deum desaparecimento",
     description: "",
     tecInfo: ["", "", ""],
     tags: "gravura",
     serie: "",
     source: Mfad01,
-    altImages: [Mfad02,Mfad03,Mfad04,Mfad05,Mfad06,Mfad07,Mfad08,Mfad09],
-      }, {
+    altImages: [Mfad02, Mfad03, Mfad04, Mfad05, Mfad06, Mfad07, Mfad08, Mfad09],
+    data_publicacao: "",
+  },
+  {
     title: "Monge",
     description: "Explora principalmente a questão do tecido e busca entender como se comportam as dobras, vincos e acúmulo de tecido.",
     tecInfo: ["Oilclay sobre base de madeira", "", "2016"],
@@ -235,7 +269,9 @@ const content = [
     serie: "0001",
     source: Monge,
     altImages: [],
-  },  {
+    data_publicacao: "",
+  },
+  {
     title: "Moon Pic",
     description: "",
     tecInfo: ["", "", ""],
@@ -243,6 +279,7 @@ const content = [
     serie: "",
     source: MoonPic,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Montanha (The Mountain)",
@@ -252,22 +289,7 @@ const content = [
     serie: "0001",
     source: Mountain,
     altImages: [],
-  },  {
-    title: "Tree Trunk",
-    description: "",
-    tecInfo: ["", "", ""],
-    tags: "gravura",
-    serie: "",
-    source: TreeTrunk01,
-    altImages: [TreeTrunk02],
-  },  {
-    title: "Underpass",
-    description: "",
-    tecInfo: ["", "", ""],
-    tags: "gravura",
-    serie: "",
-    source: Underpass01,
-    altImages: [Underpass02,Underpass03,Underpass04,Underpass05,Underpass06,Underpass07,Underpass08,Underpass09,Underpass10,Underpass11,Underpass12,Underpass13,Underpass14],
+    data_publicacao: "",
   },
   {
     title: "Estudo sobre plantas 1",
@@ -277,6 +299,7 @@ const content = [
     serie: "0002",
     source: PlantPaint0001,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Estudo sobre plantas 2",
@@ -286,6 +309,7 @@ const content = [
     serie: "0002",
     source: PlantPaint0002,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Estudo sobre plantas 3",
@@ -295,6 +319,7 @@ const content = [
     serie: "0002",
     source: PlantPaint0003,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Estudo sobre plantas 4",
@@ -304,6 +329,7 @@ const content = [
     serie: "0002",
     source: PlantPaint0004,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Estudo sobre plantas 5",
@@ -313,6 +339,7 @@ const content = [
     serie: "0002",
     source: PlantPaint0005,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Quarto (em andamento)",
@@ -322,6 +349,7 @@ const content = [
     serie: "",
     source: RoomVideo,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Quarto (em andamento)",
@@ -331,6 +359,7 @@ const content = [
     serie: "",
     source: Roomimg,
     altImages: [],
+    data_publicacao: "",
   },
   {
     title: "Telhados",
@@ -340,6 +369,27 @@ const content = [
     serie: "",
     source: Telhados,
     altImages: [],
+    data_publicacao: "",
+  },
+  {
+    title: "Tree Trunk",
+    description: "",
+    tecInfo: ["", "", ""],
+    tags: "gravura",
+    serie: "",
+    source: TreeTrunk01,
+    altImages: [TreeTrunk02],
+    data_publicacao: "",
+  },
+  {
+    title: "Underpass",
+    description: "",
+    tecInfo: ["", "", ""],
+    tags: "gravura",
+    serie: "",
+    source: Underpass01,
+    altImages: [Underpass02, Underpass03, Underpass04, Underpass05, Underpass06, Underpass07, Underpass08, Underpass09, Underpass10, Underpass11, Underpass12, Underpass13, Underpass14],
+    data_publicacao: "",
   },
   {
     title: "Moinho (em andamento)",
@@ -350,6 +400,7 @@ const content = [
     source: Watermill,
     altImages: [],
     type: 'pequena',
+    data_publicacao: "",
   },
 
 ];
