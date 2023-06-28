@@ -26,13 +26,14 @@ function App() {
       {location.pathname !== '/' && <SideMenu handleClick={filter} />}
       <Routes>
         <Route path='/' exact element={<IntroCarousel />} />
-        <Route path='/inicial' exact element={<Home categories={tags} allContent={content} />} />
-        <Route path='/esculturas' exact element={<Category categories={tags} allContent={content} />} />
-        <Route path='/pinturas' exact element={<Category categories={tags} allContent={content} />} />
-        <Route path='/gravuras' exact element={<Category categories={tags} allContent={content} />} />
-        <Route path='/modelagem3D' exact element={<Category categories={tags} allContent={content} />} />
-        <Route path='/pinturadigital' exact element={<Category categories={tags} allContent={content} />} />
-        <Route path='/animacao' exact element={<Category categories={tags} allContent={content} />} />
+        <Route path='/inicial' exact element={<Home categories={tags} contentTag={content} />} />
+        <Route path='/esculturas' exact element={<Category title={'Esculturas'} categories={tags} contentTag={content} />} />
+        <Route path='/pinturas' exact element={<Category  title={'Pinturas'} categories={tags} contentTag={content} />} />
+        <Route path='/gravuras' exact element={<Category title={'Gravuras'} categories={tags} contentTag={content} />} />
+        <Route path='/modelagem3D' exact element={<Category  title={'Modelagem 3D'} categories={tags} contentTag={content} />} />
+        <Route path='/pinturadigital' exact element={<Category  title={'Pintura Digital'} categories={tags} contentTag={content} />} />
+        <Route path='/animacao' exact element={<Category  title={'Animação'} categories={tags} contentTag={content} />} />
+        <Route path='/projetos' />
         <Route path='/bio' />
         <Route path='/contato' />
       </Routes>

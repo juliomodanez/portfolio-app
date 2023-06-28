@@ -10,6 +10,7 @@ import BrushIcon from '@mui/icons-material/Brush';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
+import TokenIcon from '@mui/icons-material/Token';
 import '@fontsource/dosis/600.css';
 
 function SideMenu({ handleClick }) {
@@ -35,7 +36,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("all")}>
                         <HomeIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -58,7 +59,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("escultura")}>
                         <CarpenterIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -81,7 +82,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("pintura")}>
                         <ColorLensIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -104,7 +105,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("gravura")}>
                         <CreateIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -127,7 +128,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("3D")}>
                         <ViewInArIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -150,7 +151,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("digital")}>
                         <BrushIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -173,7 +174,7 @@ function SideMenu({ handleClick }) {
                         onClick={() => handleClick("animacao")}>
                         <LocalMoviesIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -188,6 +189,29 @@ function SideMenu({ handleClick }) {
                     </Link>
                 </MenuItem>
                 <MenuItem
+                    onMouseEnter={() => handleMouseEnter("projetos")}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
+                        to="/projetos"
+                        onClick={() => handleClick("projetos")}>
+                        <TokenIcon sx={{ textDecoration: 'none', color: 'white' }} />
+                        <p style={{
+                            padding: '0.15rem',
+                            paddingInline:'1rem',
+                            margin: '0',
+                            marginLeft: '1rem',
+                            backgroundColor: 'black',
+                            transition: 'opacity 0.5s ease-in-out',
+                            opacity: hoveredItem === "projetos" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
+                        }}
+                        >Projetos</p>
+                    </Link>
+                </MenuItem>
+                <MenuItem
                     onMouseEnter={() => handleMouseEnter("bio")}
                     onMouseLeave={handleMouseLeave}
                 >
@@ -195,7 +219,7 @@ function SideMenu({ handleClick }) {
                         to="/bio">
                         <AccountCircleIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
@@ -217,7 +241,7 @@ function SideMenu({ handleClick }) {
                         to="/contato">
                         <WalletIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
-                            padding: '0.5rem',
+                            padding: '0.15rem',
                             paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',

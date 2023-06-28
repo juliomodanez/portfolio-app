@@ -1,11 +1,12 @@
 import React from 'react'
-import { ImageList, ImageListItem } from '@mui/material'
+import { ImageList, ImageListItem, Typography } from '@mui/material'
 import '@fontsource/cinzel'
 
-function Category({ allContent }) {
-    
+function Category({ title, contentTag }) {
+
     return (
-        <div style={{ backgroundColor: 'black', paddingInline: '4vw' }}>
+        <div style={{ backgroundColor: 'black', paddingInline: '4vw', paddingTop: '2vh', height: 'window.innerHeight'  }}>
+             <p style={{ fontFamily: 'Cinzel', fontSize: '5vh', color: 'white' }}>{title}</p>
             <ImageList
                 variant="masonry"
                 cols={3}
@@ -13,9 +14,9 @@ function Category({ allContent }) {
                 style={{ margin: '0' }}
             >
 
-                {allContent
+                {contentTag
                     .map((filteredItem, index) => (
-                        <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+                        <div style={{ width: '100%', height: '100%', overflow: 'hidden' }} key={index}>
                             {(filteredItem.tecInfo[0] === "video" ?
                                 (
                                     <iframe
@@ -41,6 +42,14 @@ function Category({ allContent }) {
                         </div>
                     ))}
             </ImageList >
+            <hr style={{
+                borderTop: '1px solid white',
+                margin: '4vh',
+            }} />
+            <Typography style={{
+                fontFamily: 'Dosis', fontSize: '1.25rem', textDecoration: 'none', color: 'white', textAlign: 'right', paddingInline: '4vh', paddingBlock: '2vh', marginBlock: '-5vh'
+            }}
+            >Copyright © 2021 by Julio Modanez</Typography>
         </div >
     )
 }

@@ -54,9 +54,10 @@ function Intro() {
                                 overflow: 'hidden',
                                 width: '100%',
                                 zIndex: 'modal',
-                                filter:'brightness(110%) saturate(0.75) grayscale(10%)'
+                                filter: 'brightness(110%) saturate(0.75) grayscale(10%)'
                             }}
                             src={image.source}
+                            key={index}
                         />
                     ) : null
                 ))}
@@ -76,9 +77,9 @@ function Intro() {
                     zIndex: 999,
                 }}
             >
-                <Button style={{textTransform: 'none'}}>
+                <Button style={{ textTransform: 'none' }}>
                     <Link to="/inicial" style={{
-                        fontFamily: 'Dosis', fontSize:'1.75rem', fontWeight: 'bold', textDecoration: 'none', color: 'white', padding: '50px 25px'
+                        fontFamily: 'Dosis', fontSize: '1.75rem', fontWeight: 'bold', textDecoration: 'none', color: 'white', padding: '50px 25px'
                     }}>
                         Explorar
                     </Link>
