@@ -31,7 +31,6 @@ function Category({ allContent }) {
                                             src={filteredItem.source}
                                             alt={filteredItem.title}
                                             loading="lazy"
-                                            // onClick={handleOpen}
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                             key={index}
                                         />

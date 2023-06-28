@@ -10,6 +10,7 @@ import BrushIcon from '@mui/icons-material/Brush';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
+import '@fontsource/dosis/600.css';
 
 function SideMenu({ handleClick }) {
     const [hoveredItem, setHoveredItem] = useState(null);
@@ -24,7 +25,7 @@ function SideMenu({ handleClick }) {
 
     return (
         <Paper>
-            <MenuList sx={{ position: 'fixed', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }} >
+            <MenuList sx={{ position: 'fixed', width: '4vw', paddingTop: '15vh', bgcolor: 'black', zIndex: 99 }} >
                 <MenuItem
                     onMouseEnter={() => handleMouseEnter("inicial")}
                     onMouseLeave={handleMouseLeave}
@@ -35,11 +36,15 @@ function SideMenu({ handleClick }) {
                         <HomeIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
-                            opacity: hoveredItem === "inicial" ? 1 : 0
+                            opacity: hoveredItem === "inicial" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Inicial</p>
                     </Link>
@@ -54,11 +59,15 @@ function SideMenu({ handleClick }) {
                         <CarpenterIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
                             opacity: hoveredItem === "escultura" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Esculturas</p>
                     </Link>
@@ -73,11 +82,15 @@ function SideMenu({ handleClick }) {
                         <ColorLensIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
                             opacity: hoveredItem === "pintura" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Pinturas</p>
                     </Link>
@@ -92,11 +105,15 @@ function SideMenu({ handleClick }) {
                         <CreateIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
                             opacity: hoveredItem === "gravura" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Gravuras</p>
                     </Link>
@@ -111,11 +128,15 @@ function SideMenu({ handleClick }) {
                         <ViewInArIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
                             opacity: hoveredItem === "3D" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Modelagem 3D</p>
                     </Link>
@@ -130,11 +151,15 @@ function SideMenu({ handleClick }) {
                         <BrushIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
                             opacity: hoveredItem === "digital" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Pintura Digital</p>
                     </Link>
@@ -149,23 +174,61 @@ function SideMenu({ handleClick }) {
                         <LocalMoviesIcon sx={{ textDecoration: 'none', color: 'white' }} />
                         <p style={{
                             padding: '0.5rem',
+                            paddingInline:'1rem',
                             margin: '0',
                             marginLeft: '1rem',
                             backgroundColor: 'black',
                             transition: 'opacity 0.5s ease-in-out',
                             opacity: hoveredItem === "animacao" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
                         }}
                         >Animação</p>
                     </Link>
                 </MenuItem>
-                <MenuItem>
-                    <Link to="/bio">
+                <MenuItem
+                    onMouseEnter={() => handleMouseEnter("bio")}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
+                        to="/bio">
                         <AccountCircleIcon sx={{ textDecoration: 'none', color: 'white' }} />
+                        <p style={{
+                            padding: '0.5rem',
+                            paddingInline:'1rem',
+                            margin: '0',
+                            marginLeft: '1rem',
+                            backgroundColor: 'black',
+                            transition: 'opacity 0.5s ease-in-out',
+                            opacity: hoveredItem === "bio" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
+                        }}
+                        >Bio</p>
                     </Link>
                 </MenuItem>
-                <MenuItem>
-                    <Link to="/contato">
+                <MenuItem
+                    onMouseEnter={() => handleMouseEnter("contato")}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
+                        to="/contato">
                         <WalletIcon sx={{ textDecoration: 'none', color: 'white' }} />
+                        <p style={{
+                            padding: '0.5rem',
+                            paddingInline:'1rem',
+                            margin: '0',
+                            marginLeft: '1rem',
+                            backgroundColor: 'black',
+                            transition: 'opacity 0.5s ease-in-out',
+                            opacity: hoveredItem === "contato" ? 1 : 0,
+                            borderRadius: '0.5rem',
+                            fontFamily: 'Dosis',
+                            fontSize: '1.45rem',
+                        }}
+                        >Contato</p>
                     </Link>
                 </MenuItem>
             </MenuList>
