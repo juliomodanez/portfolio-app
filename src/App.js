@@ -5,6 +5,7 @@ import Category from "./components/category";
 import Content from './contents/Content'
 import IntroCarousel from "./pages/intro";
 import Home from './pages/home';
+import Bio from './pages/bio';
 
 function App() {
   const location = useLocation();
@@ -34,8 +35,7 @@ function App() {
         <Route path='/pinturadigital' exact element={<Category  title={'Pintura Digital'} categories={tags} contentTag={content} />} />
         <Route path='/animacao' exact element={<Category  title={'Animação'} categories={tags} contentTag={content} />} />
         <Route path='/projetos' />
-        <Route path='/bio' />
-        <Route path='/contato' />
+        <Route path='/bio' exact element={<Bio />}/>
       </Routes>
     </div>
   )

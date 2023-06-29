@@ -36,7 +36,7 @@ function Intro() {
                 <Typography style={{ fontFamily: 'Cinzel', fontSize: '10vh' }}>Julio Modanez</Typography>
 
             </Box>
-            <AutoPlaySwipeableViews interval={7000}
+            <AutoPlaySwipeableViews interval={4000}
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
                 onChangeIndex={handleStepChange}
@@ -87,7 +87,7 @@ function Intro() {
                 <Typography style={{
                     fontFamily: 'Dosis', textDecoration: 'none', color: 'white'
                 }}
-                >Copyright © 2021 by Julio Modanez</Typography>
+                >Copyright © 2023 by Julio Modanez</Typography>
             </Box>
         </div>
     );
