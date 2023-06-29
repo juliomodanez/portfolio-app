@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import content from '../contents/Content_Intro.js'
-import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import '@fontsource/dosis/200.css';
 
@@ -29,11 +28,12 @@ function Intro() {
                     transform: 'translate(-50%, -50%)',
                     textAlign: 'center',
                     padding: '20px',
-                    color: 'white',
+                    color: 'gray',
                     zIndex: 999,
+                    mixBlendMode:'difference'
                 }}
             >
-                <Typography style={{ fontFamily: 'Cinzel', fontSize: '10vh' }}>Julio Modanez</Typography>
+                <p style={{ fontFamily: 'Cinzel', fontSize: '10vh'}}>Julio Modanez</p>
 
             </Box>
             <AutoPlaySwipeableViews interval={4000}
@@ -54,7 +54,9 @@ function Intro() {
                                 overflow: 'hidden',
                                 width: '100%',
                                 zIndex: 'modal',
-                                filter: 'brightness(110%) saturate(0.75) grayscale(10%)'
+                                filter: 'brightness(110%) saturate(0.75) grayscale(10%)',
+                                backgroundColor:'white',
+                                opacity:'0.55'
                             }}
                             src={image.source}
                             key={index}
@@ -75,19 +77,20 @@ function Intro() {
                     padding: '20px',
                     color: 'white',
                     zIndex: 999,
+                    mixBlendMode:'difference'
                 }}
             >
                 <Button style={{ textTransform: 'none' }}>
                     <Link to="/inicial" style={{
-                        fontFamily: 'Dosis', fontSize: '1.75rem', fontWeight: 'bold', textDecoration: 'none', color: 'white', padding: '50px 25px'
+                        fontFamily: 'Dosis', fontSize: '1.75rem', fontWeight: 'bold', textDecoration: 'none', color: 'gray', padding: '50px 25px'
                     }}>
                         Explorar
                     </Link>
                 </Button>
-                <Typography style={{
-                    fontFamily: 'Dosis', textDecoration: 'none', color: 'white'
+                <p style={{
+                    fontFamily: 'Dosis', fontSize: '1.25rem',  textDecoration: 'none', color: 'gray',
                 }}
-                >Copyright © 2023 by Julio Modanez</Typography>
+                >Copyright © 2023 by Julio Modanez</p>
             </Box>
         </div>
     );

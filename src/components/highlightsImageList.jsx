@@ -21,6 +21,7 @@ function HighlightsImageList({ title, content }) {
                 sx={{ width: '100%', height: '75%' }}
                 variant="quilted"
                 cols={4}
+                gap={9}
             >
 
                 {highlightContent[0]

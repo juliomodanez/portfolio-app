@@ -10,7 +10,7 @@ function Category({ title, contentTag }) {
             <ImageList
                 variant="masonry"
                 cols={3}
-                gap={4}
+                gap={9}
                 style={{ margin: '0' }}
             >
 
