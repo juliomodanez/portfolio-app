@@ -25,7 +25,7 @@ function SideMenu({ handleClick }) {
 
     return (
         <Paper>
-            <MenuList sx={{ position: 'fixed', width: '4vw', paddingTop: '15vh', bgcolor: 'black', zIndex: 99 }} >
+            <MenuList sx={{ position: 'fixed', height:'100vh', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }} >
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
                         to="/inicial"
@@ -139,7 +139,7 @@ function SideMenu({ handleClick }) {
                         >Modelagem 3D</p>
                     </Link>
                 </MenuItem>
-                <MenuItem>
+                {/* <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
                         to="/pinturadigital"
                         onClick={() => handleClick("digital")}>
@@ -184,7 +184,7 @@ function SideMenu({ handleClick }) {
                         }}
                         >Animação</p>
                     </Link>
-                </MenuItem>
+                </MenuItem> */}
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
                         to="/projetos"
