@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ImageList, ImageListItem, Typography } from '@mui/material'
-import '@fontsource/cinzel'
+import '@fontsource/cinzel';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AppContext } from '../AppContext';
 
 function Category({ title, contentTag }) {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { updateParams } = useContext(AppContext);
+
+    const handleClickOnImage = (item) => {
+        const currentPathName = location.pathname;
+        const itemTitle = item.title;
+        const url = `${currentPathName}/${itemTitle}`;
+
+        updateParams(item.title, item.description, item.tecInfo, item.tags, item.serie,item.source, item.altImages, item.data_publicacao);
+
+        navigate(url);
+    };
 
     return (
-        <div style={{ backgroundColor: 'black', paddingInline: '4vw', paddingTop: '2vh', height: 'window.innerHeight'  }}>
-             <p style={{ fontFamily: 'Cinzel', fontSize: '5vh', color: 'white' }}>{title}</p>
+        <div style={{ backgroundColor: 'black', paddingInline: '4vw', paddingTop: '2vh', height: 'window.innerHeight' }}>
+            <p style={{ fontFamily: 'Cinzel', fontSize: '5vh', color: 'white' }}>{title}</p>
             <ImageList
                 variant="masonry"
                 cols={3}
@@ -27,7 +42,9 @@ function Category({ title, contentTag }) {
                                         key={index}
                                     ></iframe>
                                 ) : (
-                                    <ImageListItem cols={filteredItem.cols || 1} rows={filteredItem.rows || 1}>
+                                    <ImageListItem cols={filteredItem.cols || 1} rows={filteredItem.rows || 1}
+                                    onClick={() => handleClickOnImage(filteredItem)}
+                                    >
                                         <img
                                             src={filteredItem.source}
                                             alt={filteredItem.title}
@@ -49,7 +66,7 @@ function Category({ title, contentTag }) {
             <Typography style={{
                 fontFamily: 'Dosis', fontSize: '1.25rem', textDecoration: 'none', color: 'white', textAlign: 'right', paddingInline: '4vh', paddingBlock: '2vh', marginBlock: '-5vh'
             }}
-            >Copyright © 2021 by Julio Modanez</Typography>
+            >Copyright © 2023 by Julio Modanez</Typography>
         </div >
     )
 }
