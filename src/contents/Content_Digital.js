@@ -1,6 +1,6 @@
-import AnvilIntro from "../images/anvil.png"
-import Donutimg from "../images/donut/Donut.png"
-import Telhados from "../images/telhados_001.png"
+import AnvilIntro from "../images/3D/anvil.png"
+import Donutimg from "../images/3D/donut/Donut.png"
+import Telhados from "../images/3D/telhados_001.png"
 
 const digitalHL = [
   {

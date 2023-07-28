@@ -1,4 +1,4 @@
-import AnvilIntro from "../images/anvil.png"
+import AnvilIntro from "../images/3D/anvil.png"
 import BoxIntro from "../images/introPics/boxIntroPic.jpg"
 import Coast02Intro from "../images/introPics/coast02IntroPic.jpg"
 import Coast03Intro from "../images/introPics/coast03IntroPic.jpg"
