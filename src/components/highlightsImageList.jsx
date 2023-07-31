@@ -40,7 +40,7 @@ function HighlightsImageList({ title, content }) {
 
                 {highlightContent[0]
                     .map((item, index) => (
-                        <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={index} onClick={() => handleClickOnImage(item)}>
+                        <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={index}>
                             <img
                                 {...srcset(item.source, 121, item.rows, item.cols)}
                                 alt={item.title}
