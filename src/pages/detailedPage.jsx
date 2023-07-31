@@ -8,23 +8,25 @@ function DetailedPage() {
     return (
         <div style={{ backgroundColor: 'black', paddingTop: '0.5vh', height: 'window.innerHeight' }}>
             <p style={{ fontFamily: 'Cinzel', fontSize: '6vh', color: 'white', textAlign: 'center', textDecorationLine: 'underline', textUnderlineOffset: '2vh' }}>{param1}</p>
-            <div style={{ display: 'flex' }}>
-                <div style={{ marginInline: '6vw', width: '100%' }} >
+            <div style={{ display: 'flex',width: '100%', paddingInline:'3vw'}}>
+                <div style={{ marginInline: '2vw', width: '100%', textAlign:'justify'}} >
                     <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white' }}>Sobre</p>
                     <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white' }}>{param2}</p>
 
 
-                    <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between' }}>
-                        <div >
-                            <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white' }}>Serie</p>
-                            <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white' }}>{param5}</p>
-                        </div>
-                        <div >
-                            <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white' }}>Ficha Técnica</p>
+                    <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between'}}>
+                        {param5 === '' || param5 === null ? <></> :
+                            <div >
+                                <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white' }}>Serie</p>
+                                <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white' }}>{param5}</p>
+                            </div>
+                        }
+                        <div>
+                            <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white', marginRight:'2vw'}}>Ficha Técnica</p>
 
                             {(param3.map((p, index) => {
                                 return (
-                                    <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white' }}
+                                    <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white', marginRight:'2vw' }}
                                         key={index}>
                                         {p}
                                     </p>
@@ -33,18 +35,18 @@ function DetailedPage() {
                         </div>
 
                         <div >
-                            <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white' }}>Tags</p>
-                            <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white' }}>#{param4}</p>
+                            <p style={{ fontFamily: 'Dosis', fontSize: '2.5rem', color: 'white', marginLeft:'2vw' }}>Tags</p>
+                            <p style={{ fontFamily: 'Dosis', fontSize: '1.35rem', color: 'white', marginLeft:'2vw' }}>#{param4}</p>
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '100%', paddingInline: '6vw', paddingBlock: '4vh', }}>
+                <div style={{ height: '100%', paddingBlock: '2vh'}}>
                     {(param3[0] === "video" ?
                         (
                             <iframe
                                 title="param1"
                                 src={param6}
-                                style={{ top: 0, left: 0, width: '100%', height: '100%' }}
+                                style={{ width: '100vw', height: '100vh', maxWidth: '800px', maxHeight: '800px'}}
                                 allowFullScreen
                             ></iframe>
                         ) : (
@@ -53,7 +55,7 @@ function DetailedPage() {
                                 src={param6}
                                 alt={param1}
                                 loading="lazy"
-                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                style={{width: '100vw', height: '100vh', maxWidth: '800px', maxHeight: '800px', objectFit: 'contain'}}
                             />
 
                         )
@@ -67,7 +69,7 @@ function DetailedPage() {
                             borderTop: '1px solid white',
                             margin: '4vh',
                         }} />
-                        <div style={{ display: 'flex', justifyContent: param7.length === 1 ? 'center' : 'space-evenly', marginInline: '6vw', paddingBlock: '2vh' }}>
+                        <div style={{ display: 'flex', maxWidth: '100%', flexWrap: 'wrap', justifyContent: param7.length === 1 ? 'center' : 'space-evenly', marginInline: '6vw', paddingBlock: '2vh' }}>
                             {(param7.map((p, index) => {
                                 return (
                                     param3[0] === "video" ?
@@ -83,7 +85,7 @@ function DetailedPage() {
                                                 src={p}
                                                 alt={param1}
                                                 loading="lazy"
-                                                style={{ width: '30%', objectFit: 'cover' }}
+                                                style={{ width: '30%', objectFit: 'cover', padding: '2vh' }}
                                                 key={index} />
                                         )
 
