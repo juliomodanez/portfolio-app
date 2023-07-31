@@ -22,7 +22,7 @@ const intro = [
       {
       title: "Senhora do Escuro",
       description: "A animação 2D, desenvolvida e gerada a partir de uma ideia para um desenho, foi concebida através de um longo processo criativo que vem desde 2020. Usando técnicas de animação manual em meios digitais, o vídeo é montado frame a frame e compreende várias técnicas como desenho, pintura, animação e 3D. Em relação a temática e a narrativa,  as duas partem de um folclore pessoal criado e recriado durante todo o processo de elaboração da narrativa. Trata-se de uma história aberta, passível de interpretações pelo espectador e que, pessoalmente, é uma porta de entrada para criar outras histórias desse universo folclórico.",
-      tecInfo: ["Animação", "Krita", "jun 2020 - dez 2022"],
+      tecInfo: ["Animação 2D", "Krita", "jun 2020 - dez 2022"],
       tags: "projeto",
       source: senhora,
       altImages: [],
