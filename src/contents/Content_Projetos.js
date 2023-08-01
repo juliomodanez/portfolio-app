@@ -1,4 +1,4 @@
-import sunsetP5 from "../images/projetos/paisagem/P5.PNG";
+import sunsetP5 from "../images/projetos/paisagem/p5.PNG";
 import reverso from "../images/projetos/cubo/Cuboprint.png";
 import senhora from "../images/projetos/senhora/pesentation0000.png";
 
@@ -10,6 +10,7 @@ const intro = [
         tags: "projeto",
         source: sunsetP5,
         altImages: [],
+        projectLink:'https://editor.p5js.org/juliomodanez/full/PUGW9zUid'
       },
       {
         title: "Reverso",
@@ -18,6 +19,7 @@ const intro = [
         tags: "projeto",
         source: reverso,
         altImages: [],
+        projectLink:'https://avesso-57409.web.app/'
       },
       {
       title: "Senhora do Escuro",
@@ -26,6 +28,7 @@ const intro = [
       tags: "projeto",
       source: senhora,
       altImages: [],
+      projectLink:'https://drive.google.com/file/d/1Kn8pruqEFBvur1EzsVQIZe339YdCt11U/view?usp=sharing'
 },]
 
 export default intro;

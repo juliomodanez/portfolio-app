@@ -28,7 +28,7 @@ function Home() {
             <Typography style={{
                 fontFamily: 'Dosis', fontSize: '1.25rem', textDecoration: 'none', color: 'white', textAlign: 'right', paddingInline: '4vh', paddingBlock: '2vh', marginBlock: '-5vh'
             }}
-            >Copyright © 2021 by Julio Modanez</Typography>
+            >Copyright © 2023 by Julio Modanez</Typography>
         </div>
 
     );

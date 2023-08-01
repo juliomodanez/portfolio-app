@@ -9,6 +9,7 @@ import Bio from './pages/bio';
 import Projects from './pages/projects';
 import DetailedPage from './pages/detailedPage';
 import { AppProvider } from './AppContext';
+import ProjectDetailedPage from './pages/projectDetailedPage';
 
 function App() {
   const location = useLocation();
@@ -45,7 +46,7 @@ function App() {
           <Route path='/animacao' exact element={<Category title={'Animação'} categories={tags} contentTag={content} />} />
           <Route path='/animacao/:title' element={<DetailedPage />} />
           <Route path='/projetos' exact element={<Projects />} />
-          <Route path='/projetos/:title' element={<DetailedPage />} />
+          <Route path='/projetos/:title' element={<ProjectDetailedPage />} />
           <Route path='/bio' exact element={<Bio />} />
         </Routes>
       </AppProvider>
