@@ -1,4 +1,4 @@
-import { MenuItem, MenuList, Paper } from "@mui/material";
+import { MenuItem, MenuList, Paper, Tooltip } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
@@ -11,9 +11,12 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import TokenIcon from '@mui/icons-material/Token';
 import '@fontsource/dosis/600.css';
+import InfoIcon from '@mui/icons-material/Info';
 
 function SideMenu({ handleClick }) {
     const [hoveredItem, setHoveredItem] = useState(null);
+    const [infoHovered, setInfoHovered] = useState(false);
+
 
     const handleMouseEnter = (item) => {
         setHoveredItem(item);
@@ -23,9 +26,17 @@ function SideMenu({ handleClick }) {
         setHoveredItem(null);
     };
 
+    const handleInfoMouseEnter = () => {
+        setInfoHovered(true);
+    };
+
+    const handleInfoMouseLeave = () => {
+        setInfoHovered(false);
+    };
+
     return (
         <Paper>
-            <MenuList sx={{ position: 'fixed', height:'100vh', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }} >
+            <MenuList sx={{ position: 'fixed', height: '100vh', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }} >
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
                         to="/inicial"
@@ -230,7 +241,27 @@ function SideMenu({ handleClick }) {
                         >Bio | Contato</p>
                     </Link>
                 </MenuItem>
+                <MenuItem
+                    onMouseEnter={handleInfoMouseEnter}
+                    onMouseLeave={handleInfoMouseLeave}
+                    style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}
+                >
+                    <Tooltip title="Info" arrow placement="top">
+                        <InfoIcon sx={{
+                            position: 'fixed',
+                            bottom: '1rem',
+                            color: 'white',
+                            fontSize: '1.45rem',
+                            cursor: 'pointer',
+                        }} />
+                    </Tooltip>
+                </MenuItem>
             </MenuList>
+            {infoHovered && (
+                <div style={{ position: 'fixed', bottom: '1rem', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'black', color: 'white', padding: '0.5rem', borderRadius: '0.5rem', zIndex: 100 }}>
+                    O site ainda está em construção, devido a isso você pode se deparar com alguns resultados inesperados, que já estão sendo corrigidos. Obrigado.
+                </div>
+            )}
         </Paper>
     );
 }
