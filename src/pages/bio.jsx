@@ -3,9 +3,10 @@ import profile from "../images/profile.jpg";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { AlternateEmail } from "@mui/icons-material";
 
 function Bio() {
-    
+
     return (
         <div style={{ display: 'flex', alignItems: 'center', backgroundColor: 'black' }}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -43,8 +44,16 @@ function Bio() {
                         {<LinkedInIcon style={{ marginRight: '1rem' }} />} Linkedin
                     </a>
                 </div>
+                <div style={{display:'flex', justifyContent:'center'
+                }}> 
+                    <p
+                        style={{ display: 'flex', alignItems: 'center', marginTop: '3rem', fontSize: '1.5rem', textDecoration: 'none', color: 'white', fontFamily: 'Dosis' }}
+                    >
+                        {<AlternateEmail style={{ marginRight: '1rem' }} />} julio.modanez@gmail.com
+                    </p>
+                </div>
             </div>
-            <img src={profile} alt="" style={{height:'100vh'}}/>
+            <img src={profile} alt="" style={{ height: '100vh' }} />
         </div>
     );
 }
