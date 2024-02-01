@@ -81,7 +81,7 @@ function Intro() {
                 }}
             >
                 <Button style={{ textTransform: 'none' }}>
-                    <Link to="/inicial" style={{
+                    <Link to="/arte/inicial" style={{
                         fontFamily: 'Dosis', fontSize: '1.75rem', fontWeight: 'bold', textDecoration: 'none', color: 'gray', padding: '50px 25px'
                     }}>
                         Explorar

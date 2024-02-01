@@ -32,7 +32,7 @@ function App() {
       setIsMobile(window.innerWidth <= 768);
     }
 
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -43,25 +43,25 @@ function App() {
         <MobileMessage />
       ) : (
         <AppProvider>
-          {location.pathname !== '/' && <SideMenu handleClick={filter} />}
+          {location.pathname !== '/arte' && location.pathname !== '/' && <SideMenu handleClick={filter} />}
           <Routes>
-            <Route path='/' exact element={<IntroCarousel />} />
-            <Route path='/inicial' exact element={<Home categories={tags} contentTag={content} />} />
-            <Route path='/esculturas' exact element={<Category title={'Esculturas'} categories={tags} contentTag={content} />} />
-            <Route path='/esculturas/:title' element={<DetailedPage />} />
-            <Route path='/pinturas' exact element={<Category title={'Pinturas'} categories={tags} contentTag={content} />} />
-            <Route path='/pinturas/:title' element={<DetailedPage />} />
-            <Route path='/gravuras' exact element={<Category title={'Gravuras'} categories={tags} contentTag={content} />} />
-            <Route path='/gravuras/:title' element={<DetailedPage />} />
-            <Route path='/modelagem3D' exact element={<Category title={'Modelagem 3D'} categories={tags} contentTag={content} />} />
-            <Route path='/modelagem3D/:title' element={<DetailedPage />} />
-            <Route path='/pinturadigital' exact element={<Category title={'Pintura Digital'} categories={tags} contentTag={content} />} />
-            <Route path='/pinturadigital/:title' element={<DetailedPage />} />
-            <Route path='/animacao' exact element={<Category title={'Animação'} categories={tags} contentTag={content} />} />
-            <Route path='/animacao/:title' element={<DetailedPage />} />
-            <Route path='/projetos' exact element={<Projects />} />
-            <Route path='/projetos/:title' element={<ProjectDetailedPage />} />
-            <Route path='/bio' exact element={<Bio />} />
+            <Route path='/arte' exact element={<IntroCarousel />} />
+            <Route path='/arte/inicial' exact element={<Home categories={tags} contentTag={content} />} />
+            <Route path='/arte/esculturas' exact element={<Category title={'Esculturas'} categories={tags} contentTag={content} />} />
+            <Route path='/arte/esculturas/:title' element={<DetailedPage />} />
+            <Route path='/arte/pinturas' exact element={<Category title={'Pinturas'} categories={tags} contentTag={content} />} />
+            <Route path='/arte/pinturas/:title' element={<DetailedPage />} />
+            <Route path='/arte/gravuras' exact element={<Category title={'Gravuras'} categories={tags} contentTag={content} />} />
+            <Route path='/arte/gravuras/:title' element={<DetailedPage />} />
+            <Route path='/arte/modelagem3D' exact element={<Category title={'Modelagem 3D'} categories={tags} contentTag={content} />} />
+            <Route path='/arte/modelagem3D/:title' element={<DetailedPage />} />
+            <Route path='/arte/pinturadigital' exact element={<Category title={'Pintura Digital'} categories={tags} contentTag={content} />} />
+            <Route path='/arte/pinturadigital/:title' element={<DetailedPage />} />
+            <Route path='/arte/animacao' exact element={<Category title={'Animação'} categories={tags} contentTag={content} />} />
+            <Route path='/arte/animacao/:title' element={<DetailedPage />} />
+            <Route path='/arte/projetos' exact element={<Projects />} />
+            <Route path='/arte/projetos/:title' element={<ProjectDetailedPage />} />
+            <Route path='/arte/bio' exact element={<Bio />} />
           </Routes>
         </AppProvider>
       )}

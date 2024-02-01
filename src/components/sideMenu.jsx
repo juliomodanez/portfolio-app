@@ -39,7 +39,7 @@ function SideMenu({ handleClick }) {
             <MenuList sx={{ position: 'fixed', height: '100vh', width: '4vw', paddingTop: '25vh', bgcolor: 'black', zIndex: 99 }} >
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/inicial"
+                        to="/arte/inicial"
                         onClick={() => handleClick("all")}>
                         <HomeIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("inicial")}
@@ -61,7 +61,7 @@ function SideMenu({ handleClick }) {
                 </MenuItem>
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/esculturas"
+                        to="/arte/esculturas"
                         onClick={() => handleClick("escultura")}>
                         <CarpenterIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("escultura")}
@@ -84,7 +84,7 @@ function SideMenu({ handleClick }) {
                 </MenuItem>
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/pinturas"
+                        to="/arte/pinturas"
                         onClick={() => handleClick("pintura")}>
                         <ColorLensIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("pintura")}
@@ -106,7 +106,7 @@ function SideMenu({ handleClick }) {
                 </MenuItem>
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/gravuras"
+                        to="/arte/gravuras"
                         onClick={() => handleClick("gravura")}>
                         <CreateIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("gravura")}
@@ -129,7 +129,7 @@ function SideMenu({ handleClick }) {
                 </MenuItem>
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/modelagem3D"
+                        to="/arte/modelagem3D"
                         onClick={() => handleClick("3D")}>
                         <ViewInArIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("3D")}
@@ -198,7 +198,7 @@ function SideMenu({ handleClick }) {
                 </MenuItem> */}
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/projetos"
+                        to="/arte/projetos"
                         onClick={() => handleClick("projetos")}>
                         <TokenIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("projetos")}
@@ -221,7 +221,7 @@ function SideMenu({ handleClick }) {
                 </MenuItem>
                 <MenuItem>
                     <Link style={{ display: 'flex', color: 'white', alignItems: 'center', textDecoration: 'none' }}
-                        to="/bio">
+                        to="/arte/bio">
                         <AccountCircleIcon sx={{ textDecoration: 'none', color: 'white' }}
                             onMouseEnter={() => handleMouseEnter("bio")}
                             onMouseLeave={handleMouseLeave}
