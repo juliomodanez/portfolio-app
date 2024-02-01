@@ -3,13 +3,13 @@ import SideMenu from "./components/sideMenu";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Category from "./components/category";
 import Content from './contents/Content'
-import IntroCarousel from "./pages/intro";
-import Home from './pages/home';
-import Bio from './pages/bio';
-import Projects from './pages/projects';
-import DetailedPage from './pages/detailedPage';
+import IntroCarousel from "./art_portfolio_pages/intro";
+import Home from './art_portfolio_pages/home';
+import Bio from './art_portfolio_pages/bio';
+import Projects from './art_portfolio_pages/projects';
+import DetailedPage from './art_portfolio_pages/detailedPage';
 import { AppProvider } from './AppContext';
-import ProjectDetailedPage from './pages/projectDetailedPage';
+import ProjectDetailedPage from './art_portfolio_pages/projectDetailedPage';
 import MobileMessage from './components/mobileMessage';
 
 function App() {
