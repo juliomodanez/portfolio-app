@@ -11,6 +11,7 @@ import DetailedPage from './art_portfolio_pages/detailedPage';
 import { AppProvider } from './AppContext';
 import ProjectDetailedPage from './art_portfolio_pages/projectDetailedPage';
 import MobileMessage from './components/mobileMessage';
+import HomeDesign from './design_portfolio_pages/home';
 
 function App() {
   const location = useLocation();
@@ -43,7 +44,10 @@ function App() {
         <MobileMessage />
       ) : (
         <AppProvider>
-          {location.pathname !== '/arte' && location.pathname !== '/' && <SideMenu handleClick={filter} />}
+          {location.pathname !== '/arte' 
+          && location.pathname !== '/' 
+          && !location.pathname.includes('/design')
+          && <SideMenu handleClick={filter} />}
           <Routes>
             <Route path='/arte' exact element={<IntroCarousel />} />
             <Route path='/arte/inicial' exact element={<Home categories={tags} contentTag={content} />} />
@@ -62,6 +66,7 @@ function App() {
             <Route path='/arte/projetos' exact element={<Projects />} />
             <Route path='/arte/projetos/:title' element={<ProjectDetailedPage />} />
             <Route path='/arte/bio' exact element={<Bio />} />
+            <Route path='/design' exact element={<HomeDesign/>} />
           </Routes>
         </AppProvider>
       )}
